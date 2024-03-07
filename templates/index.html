@@ -8,6 +8,23 @@
     <script src="/static/functions.js"></script>
 </head>
 <body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>a</th>
+        <th>b</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for perfil in perfiles %}
+      <tr>
+        <td>{{perfil.0}}</td>
+				<td>{{perfil.1}}</td>
+      </tr>
+    </tbody>
+  </table>
+
 <div class="box">
     <h1 id="logintoregister">Login</h1>
   <div class="group">      
@@ -50,6 +67,7 @@
 <button id="buttonlogintoregister">Login</button>
     <p id="plogintoregister">No estas registrado? </p><p id="textchange" onclick="register()"> Regístrate</p>
   </div>
+
 
 </body>
 </html>

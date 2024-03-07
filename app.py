@@ -2,7 +2,6 @@ from flask import Flask, flash, render_template, request, redirect, url_for, fla
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
-app.secret_key = 'mysecretkey'
 
 app.secret_key = 'mysecretkey'
 
