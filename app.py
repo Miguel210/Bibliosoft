@@ -2,6 +2,7 @@ from flask import Flask, flash, render_template, request, redirect, url_for, fla
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
 app.secret_key = 'mysecretkey'
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -12,13 +13,15 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/perfil')
+def inicio():
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM perfil")
+    cur.execute('SELECT * FROM perfil')
     data = cur.fetchall()
     cur.close()
-    print(data)
-    return render_template('index.html', perfiles=data)
-
+    return render_template('perfil.html', perfiles=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
