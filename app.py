@@ -7,8 +7,8 @@ app.secret_key = 'mysecretkey'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Lozan@miguel2001'
-app.config['MYSQL_DB'] = 'biblioteca'
+app.config['MYSQL_PASSWORD'] = '12345678'
+app.config['MYSQL_DB'] = 'bibliosoft'
 mysql = MySQL(app)
 
 @app.route('/')
